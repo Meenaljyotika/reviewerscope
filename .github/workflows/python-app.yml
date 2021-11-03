@@ -45,4 +45,4 @@ jobs:
           context: ./
           file: sendresults/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/reviewerscope/reviewerscope-repo:sendresultsserviceimg:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ reviewerscope/reviewerscope-repo:sendresultsserviceimg$(echo ${GITHUB_SHA} | cut -c1-8):latest
